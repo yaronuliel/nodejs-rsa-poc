@@ -1,0 +1,12 @@
+{
+  "name": "node-rsa-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "enc": "node main.js encrypt key/demo.pub",
+    "dec": "node main.js decrypt key/demo",
+    "gen-keys": "ssh-keygen -f key/demo -m pem && (ssh-keygen -e -f key/demo -m pem > .tmp.key) && mv .tmp.key key/demo.pub",
+    "test": "/bin/bash tests/test.sh"
+  }
+}
